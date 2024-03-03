@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!-- saved from url=(0372)https://fledge.us.criteo.com/interest-group?data=vVNbUHxWc0lVSDFSNllEMWpJR3hNVlhMK0E3WkJpTUorbTNGemhZSitXUGxobGw2NGNDNkR1WU9wM2FGa1h6L1ZSWTN3SWRVS2h6bGE2Um1hWk45amRGa0R4d0F2cTZjWjVIWStscmZwOGJURVB0bmh5eWJXamlRMU1kV09raG00dW5aNmlZcldEZURmV0pSanZrQ2lvNkRWdEMvM01RYWNSZU9vNWZESUVQSmFKT2I4cGNVdmFIaWFBbUkvUWJaRVc1VGJrU2VCNFFydXROTHo3TnVDYnFNSDhlZmNoYnp2dW9iQ05oc2RQRmNkb2hNPXw -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <!-- Chrome origin trial token -->
+    <meta http-equiv="origin-trial" content="AnolOEEMEnMaCvmUcw/eijaA/Ntx4pke43TW8O1+XFxTL7yMSzmBnkPrjQ33sKmqvREEpLQOE72gUMzHLu9KiAoAAABseyJvcmlnaW4iOiJodHRwczovL2NyaXRlby5jb206NDQzIiwiZmVhdHVyZSI6IlByaXZhY3lTYW5kYm94QWRzQVBJcyIsImV4cGlyeSI6MTY5NTE2Nzk5OSwiaXNTdWJkb21haW4iOnRydWV9">
+</head>
+<body>
+
+<script>
+    function getBswIg() {
+        const elt = document.createElement("iframe");
+        elt.allow = "join-ad-interest-group";
+        elt.width = "0";
+        elt.height = "0";
+        elt.style.display = "none";
+        elt.title = "BSW IG";
+        elt.src = "https://dsp-paapi-sandbox.bsw-ig.criteo.com/paapi/dsp/html/index";
+
+        document.body.appendChild(elt);
+    }
+
+    if (!navigator.joinAdInterestGroup) {
+        console.log("No fledge for you!");
+    } else {
+        var igs = [{"owner":"https://fledge.us.criteo.com","name":"W16Pcnw2MFJRaUFaZDNwVC84SUR5dElxaitnPT18","priorityVector":{"browserSignals.ageInMinutes":-1,"browserSignals.one":-86400},"biddingLogicURL":"https://fledge.us.criteo.com/simplebid?platform=us","biddingWasmHelperURL":"https://fledge.us.criteo.com/criteo.wasm","trustedBiddingSignalsURL":"https://fledge.us.criteo.com/getvalues","trustedBiddingSignalsKeys":["yXNJ-nxWc0lVSDFSNllEMWpJR3hNVlhMK0EyMllidE9ZVll1RElKNDVVbzVBTFRFbEpYejJhMzQ3Q0dibW4zUVpreFdhbnZVemZ6NHRINDA3cUh0SFFzMXBSNmNZdCtkQ29YZnF3eGVsZ3pRN05DNEREZW80Q3hZSHZiYUd1dS9qQSt3eENxYVRXS2pRY2d1QUIwTVRQUkxvUnZQdEpiTmQvNUpvc1A1bzkyWnZlRktra0Y2Y09OS01EdXFBV3dpRVBkTWh8"],"userBiddingSignals":{},"updateURL":"https://fledge.us.criteo.com/interest-group/update?key=fwwXr3xWc0lVSDFSNllEMWpJR3hNVlhMK0E1aGNZYXBPTFlRYWdWclY3dE1kcDZqY09ITlY5S0FFdG1ZcFVCNEdnM3BYTE9SY0pKZkV2MkxpTUZKQ1Z1cndrdmlOM3JWQVg1YjNkZHY0RXFuV0l3UnZBb1NDNzhlOEZMN3JabG9mVWY2ZUJLeUlSdlZWZ25ERHZ4cEs5ak1VcWlUcHlVcG9XVkRxOFcvZHhVeHhzbW89fA","ads":[],"adComponents":[],"executionMode":"group-by-origin"}];
+        var expiration = 2592000;
+        for (const ig of igs) {
+            navigator.joinAdInterestGroup(ig, expiration);
+        }
+
+        if (false) {
+            getBswIg();
+        }
+    }
+
+    async function measureAudienceSize() {
+        // Measuring audience size
+        // Register worklet
+        if((!window?.sharedStorage?.worklet?.addModule) || (!window?.sharedStorage?.run)){
+            return;
+        }
+        await window.sharedStorage.worklet.addModule('');
+
+        // Run audience size measurement operation
+        await window.sharedStorage.run('audience-size-measurement', {
+            data: { bucketKey: BigInt('1152836'), contributionValue: 8192}
+        });
+    }
+
+    //TODO reactivate audience-size-measurement
+    //measureAudienceSize();
+
+</script>
+
+
+</body></html>
